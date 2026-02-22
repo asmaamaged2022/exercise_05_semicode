@@ -1,0 +1,52 @@
+:root {
+  --icolor: #ba944d;
+}
+
+body {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, #141e30);
+  position: relative;
+}
+
+h4,
+i {
+  color: var(--icolor);
+}
+
+#Registration .box {
+  background: #ada996;
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  border-radius: 20px;
+  width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.back:hover{
+  transition-duration: 1s;
+  transform: rotate(-360deg);
+}
+#Search .input-group {
+  width: 300px;
+  margin: auto;
+}
+.data{
+  background-color: #FFF3CD;
+  text-align: center;
+  color: #54420b;
+}

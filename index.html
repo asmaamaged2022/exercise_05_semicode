@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise_5</title>
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/bootstrap.css" />
+    <link rel="stylesheet" href="Css/index.css" />
+    <link rel="stylesheet" href="Css/index.responsive.css" />
+  </head>
+
+  <body>
+    <div id="Registration" class="py-5">
+      <div class="container text-center">
+        <div class="images">
+          <img src="images/logo-be01d065.png" alt="" class="img-fluid" />
+        </div>
+        <div class="box mt-5">
+          <h4 class="py-3">Students System</h4>
+          <i class="fa-solid fa-rotate-left back d-none" onclick="reLode()"></i>
+          <form class="pb-4 px-4" data-type="add">
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="FirstName *" name="firstName" required />
+            </div>
+            <p class="alert alert-danger text-start d-none" data-error-name="firstName"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="LastName *" name="lastName" required />
+            </div>
+            <p class="alert alert-danger text-start d-none" data-error-name="lastName"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+              <input type="text" class="form-control" placeholder="email *" name="email" required />
+            </div>
+            <p class="alert alert-danger text-start d-none" data-error-name="email"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-hashtag"></i></span>
+              <input type="text" class="form-control" placeholder="age *" name="age" required />
+            </div>
+            <p class="alert alert-danger text-start d-none" data-error-name="age"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-mobile-button"></i></span>
+              <input type="text" class="form-control" placeholder="Phone *" name="phone" required />
+            </div>
+            <p class="alert alert-danger text-start d-none" data-error-name="phone"></p>
+            <button class="btn btn-success w-100">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="Search" class="py-2">
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input type="text" class="form-control" placeholder="Search..." name="Search" />
+      </div>
+    </div>
+    <div id="Student">
+      <div class="container overflow-auto">
+        <div class="alert data d-none">There are no data</div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hove table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody class="table-light"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <script src="Js/sweetalert.js"></script>
+    <script src="Js/functions.js"></script>
+    <script src="Js/index.js"></script>
+    <script src="Js/bootstrap.js"></script>
+  </body>
+</html>

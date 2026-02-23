@@ -18,7 +18,7 @@ function showStudent(student) {
         <td>${student.phone}</td>
         <td class="text-nowrap">
           <button class="btn btn-info text-light me-2" onclick="insertStudentIntoForm(${student.id})">Edit</button>
-          <button class="btn btn-danger" onclick="deleteStudent(${student.id})" data-type="del">Delete</button>
+          <button class="btn btn-danger" onclick="showPopup(${student.id})" data-type="del">Delete</button>
         </td>
     </tr>`;
 }
@@ -75,15 +75,15 @@ function showAllStudents(data) {
   });
 }
 function deleteStudent(id) {
-  if (confirm("Are You Sure?")) {
-    studentArr = studentArr.filter(function (item) {
-      return item.id != id;
-    });
-    updateLocalStorage();
-    let trEle = document.querySelector(`tr[data-student-id="${id}"]`);
-    trEle.remove();
-    checkEmpty();
-  }
+  studentArr = studentArr.filter(function (item) {
+    return item.id != id;
+  });
+  updateLocalStorage();
+  let trEle = document.querySelector(`tr[data-student-id="${id}"]`);
+  if (trEle) {
+  trEle.remove();
+}
+  checkEmpty();
 }
 // with sweet alert
 // function deleteStudent(id) {
@@ -150,7 +150,7 @@ function editStudent() {
         <td>${student.phone}</td>
         <td class="text-nowrap">
           <button class="btn btn-info text-light me-2" onclick="insertStudentIntoForm(${student.id})">Edit</button>
-          <button class="btn btn-danger" onclick="deleteStudent(${student.id})" data-type="del">Delete</button>
+          <button class="btn btn-danger" onclick="showPopup(${student.id})" data-type="del">Delete</button>
         </td>`;
   reLode();
 }
@@ -167,4 +167,14 @@ function checkEmpty() {
   } else {
     alert.classList.add("d-none");
   }
+}
+function showPopup(id) {
+  Popup.classList.add("active");
+  delBtnInPopup.addEventListener("click", function () {
+    deleteStudent(id);
+    hidePopup();
+  });
+}
+function hidePopup() {
+  Popup.classList.remove("active");
 }

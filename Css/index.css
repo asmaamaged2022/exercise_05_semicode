@@ -16,13 +16,7 @@ i {
 
 #Registration .box {
   background: #ada996;
-  background: -webkit-linear-gradient(
-    to right,
-    #eaeaea,
-    #dbdbdb,
-    #f2f2f2,
-    #ada996
-  );
+  background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
   background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
   border-radius: 20px;
   width: 500px;
@@ -37,7 +31,7 @@ i {
   cursor: pointer;
   font-size: 20px;
 }
-.back:hover{
+.back:hover {
   transition-duration: 1s;
   transform: rotate(-360deg);
 }
@@ -45,8 +39,33 @@ i {
   width: 300px;
   margin: auto;
 }
-.data{
-  background-color: #FFF3CD;
+.data {
+  background-color: #fff3cd;
   text-align: center;
   color: #54420b;
+}
+#Popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+#Popup.active {
+  opacity: 1;
+  z-index: 3;
+  pointer-events: initial;
+}
+#Popup .content {
+  background-color: black;
+  color: red;
+  text-align: center;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px red;
 }

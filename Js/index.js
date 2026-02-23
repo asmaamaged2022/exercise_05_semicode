@@ -5,8 +5,9 @@ let formElement = document.querySelector("form"),
   back = document.querySelector(".back"),
   tbody = document.querySelector("tbody"),
   formBtn = formElement.querySelector("button"),
-  searchInput = document.querySelector("#Search input");
-  
+  searchInput = document.querySelector("#Search input"),
+  Popup=document.getElementById("Popup"),
+  delBtnInPopup=Popup.querySelector(".delete");
 
 if (localStorage.getItem("Students") == null) {
   localStorage.setItem("Students", JSON.stringify(studentArr));

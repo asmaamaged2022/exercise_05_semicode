@@ -62,3 +62,17 @@ searchInput.addEventListener("keyup", function () {
 
   showAllStudents(filteredStudent);
 });
+let cursor = document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove", function (e) {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+document.addEventListener("mouseleave", function () {
+  cursor.style.display = "none";
+});
+
+document.addEventListener("mouseenter", function () {
+  cursor.style.display = "block";
+});

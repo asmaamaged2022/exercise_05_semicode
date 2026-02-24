@@ -1,14 +1,27 @@
 :root {
   --icolor: #ba944d;
 }
-
+* {
+  cursor: none !important;
+}
 body {
   background: #141e30;
   background: -webkit-linear-gradient(to right, #243b55, #141e30);
-  background: linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, rgb(20, 30, 48));
   position: relative;
 }
-
+.custom-cursor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+  0 0 7px rgba(53, 52, 52, 0.8);
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
 h4,
 i {
   color: var(--icolor);
@@ -28,7 +41,7 @@ i {
   position: absolute;
   top: 30px;
   right: 30px;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 20px;
 }
 .back:hover {

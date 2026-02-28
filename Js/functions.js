@@ -80,9 +80,9 @@ function deleteStudent(id) {
   });
   updateLocalStorage();
   let trEle = document.querySelector(`tr[data-student-id="${id}"]`);
-  if (trEle) {
+
   trEle.remove();
-}
+
   checkEmpty();
 }
 // with sweet alert
@@ -98,13 +98,12 @@ function deleteStudent(id) {
 //       studentArr = studentArr.filter(function (item) {
 //         return item.id != id;
 //       });
-
 //       updateLocalStorage();
-
 //       let trEle = document.querySelector(`tr[data-student-id="${id}"]`);
-//       trEle.remove();
-//       checkEmpty();
 
+//       trEle.remove();
+
+//       checkEmpty();
 //       Swal.fire("Delete!", "", "success");
 //     }
 //   });
@@ -170,10 +169,10 @@ function checkEmpty() {
 }
 function showPopup(id) {
   Popup.classList.add("active");
-  delBtnInPopup.addEventListener("click", function () {
+  delBtnInPopup.onclick = function () {
     deleteStudent(id);
     hidePopup();
-  });
+  };
 }
 function hidePopup() {
   Popup.classList.remove("active");
